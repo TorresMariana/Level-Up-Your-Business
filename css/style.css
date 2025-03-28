@@ -182,21 +182,38 @@ img{
 
 
 /*POP UP*/
+.popup__contenedor{
+    position: fixed;
+    /* top: 100vw;
+    bottom: 100vw;
+    left: 0;
+    right: 0;
+    transform: translateY(-50vw, -50vw);  */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+
+    z-index: 10;
+    display: none;
+}
 .popup{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2em;
     width: 80%;
-    max-width: 80vw;
+    max-width: 80%;
     margin: 0 auto;
     padding: 5% 10%;
     flex-wrap: wrap;
     background-color: var(--color-fondo);
     border: 2px solid var(--color-terciario);
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     position: relative;
+    /* overflow: hidden; */
+    display: none;
 }
 .popup::before{
     content: '';
@@ -206,11 +223,8 @@ img{
     width: 100vw;
     height: 100%;
     z-index: -1;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    
-
-    display: none;
+    background-color: rgba(84, 41, 165, 0.623);
+    backdrop-filter: blur(5px);
 }
 .popup__boton{
     width: 100%;
@@ -238,6 +252,7 @@ img{
     color: var(--color-pimario);
     background-color: var(--color-fondo);
     border: 2px solid var(--color-pimario);
+    cursor: pointer;
 }
 
 /*SERVICIOS*/

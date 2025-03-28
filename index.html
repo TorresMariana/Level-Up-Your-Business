@@ -65,8 +65,8 @@
             <h2 class="container__contenido__subtitulo">We help design a ecommerce business shop</h2>
             <p class="container__contenido__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed euismod quis sit gravida pharetra sit. Cursus vel enim pretium vulputate semper sem elit magna neque. Aliquet adipisc</p>
             <div class="container__enlaces">
-                <button class="container__subenlaces__link" href="#"><img class="container__enlaces__link__play" src="assets/play-button-o.svg" alt="icono play"> See live</button>
-                <button class="container__subenlaces__link " href="#">Case study</button>
+                <button class="container__subenlaces__link" onclick="abrirPopUpVideo(1);"><img class="container__enlaces__link__play" src="assets/play-button-o.svg" alt="icono play"> See live</button>
+                <button class="container__subenlaces__link " onclick="abrirPopUpCasoDeEstudio();">Case study</button>
             </div>
         </section>
         <img class="container__imagen" src="assets/e-Commerce.png" alt="imagen e-commerce" >
@@ -77,8 +77,8 @@
             <h2 class="container__contenido__subtitulo">We design invesment funds website in Vietnam</h2>
             <p class="container__contenido__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed euismod quis sit gravida pharetra sit. Cursus vel enim pretium vulputate semper sem elit magna neque. Aliquet adipisc</p>
             <div class="container__enlaces">
-                <button class="container__subenlaces__link " href="#"><img class="container__enlaces__link__play" src="assets/play-button-o.svg" alt="icono play"> See live</button>
-                <button class="container__subenlaces__link " href="#">Case study</button>
+                <button class="container__subenlaces__link " onclick="abrirPopUpVideo(2);"><img class="container__enlaces__link__play" src="assets/play-button-o.svg" alt="icono play"> See live</button>
+                <button class="container__subenlaces__link " onclick="abrirPopUpCasoDeEstudio();">Case study</button>
             </div>
         </section>
         <img class="container__imagen" src="assets/Finance.png" alt="imagen finance" >
@@ -89,8 +89,8 @@
             <h2 class="container__contenido__subtitulo">We help design messages app for communication</h2>
             <p class="container__contenido__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed euismod quis sit gravida pharetra sit. Cursus vel enim pretium vulputate semper sem elit magna neque. Aliquet adipisc</p>
             <div class="container__enlaces">
-                <button class="container__subenlaces__link " href="#"><img class="container__enlaces__link__play" src="assets/play-button-o.svg" alt="icono play"> See live</button>
-                <button class="container__subenlaces__link " href="#">Case study</button>
+                <button class="container__subenlaces__link " onclick="abrirPopUpVideo(3);"><img class="container__enlaces__link__play" src="assets/play-button-o.svg" alt="icono play"> See live</button>
+                <button class="container__subenlaces__link " onclick="abrirPopUpCasoDeEstudio();">Case study</button>
             </div>
         </section>
         <img class="container__imagen" src="assets/Messages.png" alt="imagen massenges" >
@@ -101,16 +101,16 @@
             <h2 class="container__contenido__subtitulo">We help maintenance design for customers</h2>
             <p class="container__contenido__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed euismod quis sit gravida pharetra sit. Cursus vel enim pretium vulputate semper sem elit magna neque. Aliquet adipisc</p>
             <div class="container__enlaces">
-                <button class="container__subenlaces__link " href="#"><img class="container__enlaces__link__play" src="assets/play-button-o.svg" alt="icono play"> See live</button>
-                <button class="container__subenlaces__link " href="#">Case study</button>
+                <button class="container__subenlaces__link " onclick="abrirPopUpVideo(4);"><img class="container__enlaces__link__play" src="assets/play-button-o.svg" alt="icono play"> See live</button>
+                <button class="container__subenlaces__link " onclick="abrirPopUpCasoDeEstudio();">Case study</button>
             </div>
         </section>
         <img class="container__imagen" src="assets/Service.png" alt="imagen Service" >
     </article>
 
     <!--POP UP-->
-    <article class="popup__contenedor" style="display: none;">
-        <div class="popup" id="popup__casos__de__estudio" >
+    <article class="popup__contenedor" id="popup__contenedor">
+        <div class="popup" id="popup__casos__de__estudio">
             <section class="popup__contenido">
                 <h3 class="resaltar__texto">Problemática</h3>
                 <p class="container__contenido__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -125,43 +125,19 @@
             </section>
             <img class="container__imagen" src="assets/Case study.png" alt="imagen caso de estudio" >
 
-            <button class="popup__boton">CERRAR</button>
+            <button class="popup__boton" onclick="cerrarPopUp();">CERRAR</button>
         </div>
-        <div class="popup" id="popup__video" style="display: none;">
-            <!-- <iframe class="popup__video" width="1078" height="480" 
-                src="https://www.youtube.com/embed/WfDRBFVljC4?autoplay=1&mute=1&controls=0" 
-                title="Zomato - Food Delivery App   | Are You Hungry? | Motion Graphics Explainer Video" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-            </iframe> -->
+        <div class="popup" id="popup__video">
             <iframe class="popup__video" width="1078" height="480" 
-                src="https://www.youtube.com/embed/nzGN6amvokI?autoplay=1&mute=1&controls=0" 
-                title="Product Explainer Video for Lumin x Snowflake Summit 2023" 
+                src="" 
+                title="" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
+                allowfullscreen
+                id="popup__video__iframe">
             </iframe>
-            <!-- <iframe class="popup__video" width="1078" height="480" 
-                src="https://www.youtube.com/embed/FFewDlGHVKo?autoplay=1&mute=1&controls=0" 
-                title="2D Animation Video for Construction Tech: Aris Explainer Video" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-            </iframe> -->
-            <!-- <iframe class="popup__video" width="1078" height="480" 
-                src="https://www.youtube.com/embed/UKsm7nK_zDQ?autoplay=1&mute=1&controls=0" 
-                title="Motion Graphics Animation Video - DiversysPRO" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-            </iframe> -->
-
-            <button class="popup__boton">CERRAR</button>
+            <button class="popup__boton" onclick="cerrarPopUp();">CERRAR</button>
         </div>
     </article>
 
