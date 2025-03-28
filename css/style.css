@@ -1,5 +1,4 @@
 /*Tipografia*/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*colores*/
@@ -8,7 +7,7 @@
     --color-secundario: #636363;
     --color-terciario: #FF87B0;
     --color-fondo: #FFFFFF;
-    --color-fondo-secundario: #27a3ff29;
+    --color-footer: #27a3ff29;
     --color-hover: #d6d5ea;
     --color-extra: #DCF0FF;
 }
@@ -26,9 +25,8 @@ body{
     margin: 0 auto;
     background-color: var(--color-fondo);
     color: var(--color-secundario);
-    /* font-family: "Noto Sans Display", sans-serif; */
     font-family: "Roboto", sans-serif;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     font-size: 16px;
 }
 img{
@@ -272,7 +270,7 @@ img{
     gap: 2em;
     padding: 2% 0;
     border-radius: 2rem;
-    background-color: var(--color-fondo-secundario);
+    background-color: var(--color-footer);
 }
 .servicios__contenido__titulo{
     font-weight: 700;
@@ -336,4 +334,41 @@ img{
 .contactar{
     display: flex;
     flex-direction: column;
+    padding: 10% 0;
+}
+
+/*FOOTER*/
+.footer{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3em;
+    padding: 5% 7%;
+    background-color: var(--color-footer);
+}
+.footer__contenido{
+    width: calc(25% - 3em);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 5% 0;
+    text-align: center;
+}
+.footer__logo{
+    max-width: 80%;
+}
+.footer__contenido__rrss__icono{
+    padding-right: 10%;
+    vertical-align: middle;
+}
+
+.footer__contenido__lista__items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10%;
+}
+.footer__contenido__copyright{
+    margin: 0 auto;
 }
