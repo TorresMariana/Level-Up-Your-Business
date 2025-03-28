@@ -163,6 +163,7 @@ img{
 }
 .container__subenlaces__link{
     text-align: center;
+    text-wrap:nowrap;
     font-size: 1.2rem;
     padding: 2% 0;
     color: var(--color-secundario);
@@ -264,7 +265,7 @@ img{
     text-align: center;
     justify-content: center;
     gap: 2em;
-    padding: 2% 0;
+    padding: 2%;
     border-radius: 2rem;
     background-color: var(--color-footer);
 }
@@ -274,12 +275,19 @@ img{
 }
 .servicios__imagen{
     max-width: 100%;
-    /* aspect-ratio: 4/3; */
     object-fit: cover;
     vertical-align: middle;
 }
-.servicios__contenido .container__contenido__texto, .servicios__contenido .container__enlaces__link{
+/* .servicios__contenido .container__contenido__texto, .servicios__contenido .container__enlaces__link{
     margin: 5% 10%;
+    background-color: red;
+} */
+.servicios__contenido .container__contenido__texto{
+    padding: 5% 10%;
+}
+.servicios__contenido .container__enlaces__link{
+    width: 80%;
+    margin: 0 auto;
 }
 
 #texto__leer__mas{
@@ -303,7 +311,8 @@ img{
     vertical-align: middle;
 }
 .testimonios__destacados__comillas:last-child{
-    margin-left: auto;
+    /* margin-left: auto; */
+    align-self: end;
 }
 .testimonios__destacados__contenido .testimonio__contenido{
     flex-direction: row;
@@ -330,6 +339,7 @@ img{
 .contactar{
     display: flex;
     flex-direction: column;
+    text-align: center;
     padding: 10% 0;
 }
 
@@ -340,7 +350,7 @@ img{
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 3em;
-    padding: 5% 7%;
+    padding: 7%;
     background-color: var(--color-footer);
 }
 .footer__contenido{
@@ -375,7 +385,12 @@ img{
     margin-bottom: 10%;
 }
 .footer__contenido__copyright{
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    /* margin: 0 auto; */
 }
 
 
@@ -466,10 +481,13 @@ img{
 
 
 
-    .container{
-        flex-direction: column-reverse;
+    .container, #popup__casos__de__estudio{
+        flex-direction: column;
         gap: 4em;
         padding: 5%;
+    }
+    main.container, article.container:not(.popup__contenedor){
+        flex-direction: column-reverse;
     }
     
     .container__contenido__titulo{
@@ -478,7 +496,17 @@ img{
     .container__contenido__subtitulo{
         font-size: 1.7rem;
     }
-    
+
+    main .container__enlaces{
+        flex-direction: column;
+        gap: 2em;
+    }
+    img{
+        max-width: 100%;
+    }
+    main .container__enlaces__link{
+        padding: 1.2rem;
+    }
 
     .sponsor__contenido{
         width: 75%;
@@ -487,28 +515,49 @@ img{
     .sponsor__imagenes, .testimonios__destacados, .testimonios__destacados__contenido .testimonio__contenido{
         flex-direction: column;
     }
-    /* .servicios__contenido,.testimonios__contenedor .testimonio__contenido, .footer__contenido{
-        width: 80%;
-        margin: 0;
-    } */
+    .container__subenlaces__link{
+        font-size: 1rem;
+        padding-right: 5%;
+    }
     .servicios__contenedor, .testimonios__contenedor, .footer{
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: center;
     }
-
-
-    .testimonios__destacados__contenido .testimonio__contenido{
-        flex-direction: row;
-        box-shadow: rgba(178, 178, 178, 0.17) 0px 14px 37px -10px;
+    .servicios__contenido, .testimonios__contenedor .testimonio__contenido, .footer__contenido{
+        width: calc(80% - 2em);
     }
-    
-    
+
+    .servicios .container__contenido, .testimonios .container__contenido__subtitulo{
+        width: 75%;
+        margin: 0;
+    }
+    .servicios__contenido .container__enlaces__link{
+        margin: 0 auto;
+        padding: 2%;
+        font-size: 1rem;
+    }
+    .popup .popup__contenido, .popup .container__imagen{
+        width: calc(100% - 2em);
+    }
+    .popup__video{
+        max-width: 100%;
+        height: 50%;
+    }
+
     .testimonios__destacados__contenido .testimonio__contenido{
-        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 2em;
-        padding: 5%;
+        align-items: center;
+    }
+    .testimonios__destacados__contenido{
+        width: 50%;
+    }
+
+    .footer{
+        align-items: center;
+    }
+    .footer__logo{
+        max-width: 50%;
+        align-self: center;
     }
 }
