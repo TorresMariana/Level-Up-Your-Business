@@ -13,3 +13,9 @@
 
 * JavaScript
 
+
+
+
+<h2>Prototipo en Figma:</h2>
+
+* [Figma](https://www.figma.com/community/file/1022163547182520272)
